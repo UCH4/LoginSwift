@@ -9,7 +9,8 @@ import UIKit
 import SwiftKeychainWrapper
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
@@ -17,9 +18,25 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        printUserInfo()
         
-        print("email: ", defaults.string(forKey: "email"))
+        loadingIndicator.startAnimating()
+        loadingIndicator.isHidden = false // Asegúrate de que no esté oculto desde el Storyboard inicialmente
+        
+        // Simula la carga de datos del usuario (reemplaza con tu lógica real)
+        cargarDatosDelUsuario()
+        
+        print("email: ", defaults.string(forKey: "email") ?? "No email found")
+    }
+    
+    func cargarDatosDelUsuario() {
+        // Simulación de carga de datos (puedes ajustar el tiempo)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.printUserInfo()
+            self.loadingIndicator.stopAnimating()
+            self.loadingIndicator.isHidden = true
+            print("Datos del usuario cargados.")
+            // Aquí puedes realizar cualquier otra acción después de cargar los datos
+        }
     }
     
     func printUserInfo(){
@@ -28,11 +45,10 @@ class HomeViewController: UIViewController {
         let name: String? = KeychainWrapper.standard.string(forKey: "name")
         let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
         
-        
-        userEmailLabel.text = "  Email: "+email!
-        userIdLabel.text = "  Id: "+id!
-        userNameLabel.text = "  Name: "+name!
-        print("AccessToken: ", accessToken!)
+        userEmailLabel.text = "  Email: " + (email ?? "N/A")
+        userIdLabel.text = "  Id: " + (id ?? "N/A")
+        userNameLabel.text = "  Name: " + (name ?? "N/A")
+        print("AccessToken: ", accessToken ?? "N/A")
         
         userEmailLabel.layer.masksToBounds = true
         userIdLabel.layer.masksToBounds = true
@@ -40,7 +56,7 @@ class HomeViewController: UIViewController {
         userEmailLabel.layer.cornerRadius = 5
         userIdLabel.layer.cornerRadius = 5
         userNameLabel.layer.cornerRadius = 5
-       
+        
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {

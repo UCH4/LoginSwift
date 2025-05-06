@@ -9,11 +9,15 @@ import UIKit
 import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController {
+    @IBAction func crearCuentaButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "mostrarRegistro", sender: self)
+    }
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var eyeButton: UIButton!
+    @IBOutlet weak var loadingIndicator:  UIActivityIndicatorView!
     private var defaults = UserDefaults.standard
     
     override func viewDidLoad() {

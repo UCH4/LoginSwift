@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D869E28E6B251C369D7BE88 /* Pods_LoginSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6275F1D8D15CE3ED16ECB5B9 /* Pods_LoginSwift.framework */; };
+		370E85CB2DCA5C0300F9E52E /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E85CA2DCA5C0300F9E52E /* RegistroViewController.swift */; };
+		370E85CD2DCA8EF700F9E52E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E85CC2DCA8EF700F9E52E /* RecordViewController.swift */; };
 		8EC3554C282368CD0026979B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3554B282368CD0026979B /* UserModel.swift */; };
 		8EC35550282369140026979B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3554F282369140026979B /* Utils.swift */; };
 		8EC35552282369830026979B /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC35551282369830026979B /* Login.json */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		0291D77A89CF4F569E2B0CD3 /* Pods-LoginSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSwift.release.xcconfig"; path = "Target Support Files/Pods-LoginSwift/Pods-LoginSwift.release.xcconfig"; sourceTree = "<group>"; };
+		370E85CA2DCA5C0300F9E52E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		370E85CC2DCA8EF700F9E52E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		3C690F09C2CD4995092082BE /* Pods-LoginSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSwift.debug.xcconfig"; path = "Target Support Files/Pods-LoginSwift/Pods-LoginSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		6275F1D8D15CE3ED16ECB5B9 /* Pods_LoginSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC3554B282368CD0026979B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				8EC47C45282365F000F44B7D /* AppDelegate.swift */,
 				8EC47C47282365F000F44B7D /* SceneDelegate.swift */,
 				8EC47C4B282365F000F44B7D /* Main.storyboard */,
+				370E85CA2DCA5C0300F9E52E /* RegistroViewController.swift */,
+				370E85CC2DCA8EF700F9E52E /* RecordViewController.swift */,
 				8EC47C4E282365F100F44B7D /* Assets.xcassets */,
 				8EC47C50282365F100F44B7D /* LaunchScreen.storyboard */,
 				8EC47C53282365F100F44B7D /* Info.plist */,
@@ -132,7 +138,6 @@
 				3C690F09C2CD4995092082BE /* Pods-LoginSwift.debug.xcconfig */,
 				0291D77A89CF4F569E2B0CD3 /* Pods-LoginSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,7 +260,9 @@
 				8EC47C4A282365F000F44B7D /* LoginViewController.swift in Sources */,
 				8EC47C46282365F000F44B7D /* AppDelegate.swift in Sources */,
 				8EC47C48282365F000F44B7D /* SceneDelegate.swift in Sources */,
+				370E85CD2DCA8EF700F9E52E /* RecordViewController.swift in Sources */,
 				8EC35550282369140026979B /* Utils.swift in Sources */,
+				370E85CB2DCA5C0300F9E52E /* RegistroViewController.swift in Sources */,
 				8EC3554C282368CD0026979B /* UserModel.swift in Sources */,
 				8EC47C5B2823664400F44B7D /* HomeViewController.swift in Sources */,
 			);
